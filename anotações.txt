@@ -1,0 +1,18 @@
+Icones personalizados:
+https://fontawesome.com/
+
+Filmes de referência:
+https://www.themoviedb.org/?language=pt-BR
+
+Trabalhando com JQuery.
+Pesquisaremos por owl carouse, um repositório do github. Usado para criar carroseis. Biblioteca do Javascript
+https://owlcarousel2.github.io/OwlCarousel2/
+
+Baixar e salvar dentro da pasta GEOFLIX
+Acessar a pasta: OwlCarousel>docs>assets>vendors (copiar os arquivos - "jquery.min.js", "owl.carousel.min.js") e colar na pasta criada js\owl
+
+Para o css:
+Vamos acessar: OwlCarousel>dist>assets(Vamos copiar o "owl.carousel", "owl.theme.default.min") e colar na style\owl
+
+
+

@@ -1,0 +1,192 @@
+
+
+/*É possível utilizar variáveis dentro do css, e para declarar, definimos dentro da raiz do documento, root*/
+/*Exemplo, como sabemos as cores principais do nosso site, podemos criar variáveis com ela*/
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;
+}
+
+
+
+
+/*Todo navegador cria seu espaçamento por padrão. Vamos manter o nosso padrão onde todos os espaçamentos e margens começam com 0.*/
+/*box-sizing: border-box == Calcular o tamanho que o elemento ocupa na tela*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+/*ELEMENTO BASE*/
+
+body{
+
+  /*background: var(--preta);*/
+  background: linear-gradient(to right, black, #141414);
+  font-family: 'Arial', Times, serif;
+  color: white;
+}
+
+
+
+/*display: flex == Alinhar os elementos em tela*/
+/*justify-content: space-between == Da um espaçamento entre a primeira e o restante*/
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+
+header .logo{
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+
+/*Vamos trabalhar em cima do menu*/
+/*Retiramos a linha abaixo do nome utilizando: text-decoration*/
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+/*Cor diferente ao passar o mouse em cima do menu, para isso usamos um elemento específico: hover*/
+
+header nav a:hover{
+    color: #fff;
+}
+
+
+/*FILME PRINCIPAL*/
+/*background-size = Especificar o tamanho da imagem. cover = pega a imagem por completo */
+/*linear-gradiente melhora o contraste da imagem para que seja possível destacar as letras*/
+/*flex-direction: column = deixa todos os elementos em coluna, não em linha*/
+/*justify-content:center = centraliza nossos elementos e segue a mesma direção do flex-direction*/
+/*aligin-items:flex-start = começa nossos itens do inicio*/
+
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/capa-batman.jpg');
+    
+    height: 500px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+ 
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/*cursor: pointer = Mostrar que é algo clicável assím que mudar o cursor */
+/*transition = efeito mais suave do botão*/
+.botao{
+background-color: rgba(0,0,0,.50);
+border: none;
+color: white;
+
+padding: 15px 30px;
+margin-right: 15px;
+font-size: 12px;
+
+cursor: pointer;
+transition: .3s ease all;
+
+}
+
+/*Ao passar o mouse em algum dos botões, alterar a cor*/
+
+.botao:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+
+/*Link relacionado ao botão Assistir Agora*/
+/*Inherit = Isso fará com que o elemento tenha a cor do seu pai */
+.botao a{
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+
+
+
+
+
+/*Irá alterar o tamanho da margem de todos os containers*/
+.container{
+    margin-left: 20px;
+}
+
+/*Irá alterar somente o container pertencente a classe filme-principal*/
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme{
+   height: 100%;
+   width: 100%;
+   display: block;
+
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+    font-size: 20px;
+    margin-left: 10px;
+    
+}
+
+.carrosel-filmes .item .box-filme{
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.3s ease all;
+    }
+
+    .carrosel-filmes .item .box-filme:hover{
+        opacity: 50%;
+        
+        }
+
+footer .container{
+    background: rgb(3, 3, 3);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    margin: 0%;
+    
+}
+
+
+
+

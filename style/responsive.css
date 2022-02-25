@@ -1,0 +1,30 @@
+
+/*@media = utilizado para escrever sintaxe, criar regra de midia*/
+/*Caso tiver até no máximo 700px, ele irá efetuar uma ação*/
+/*Vamos utilizar um container que já existe no html. No caso, quando ele chegar até
+700px, será estruturado em coluna
+*/
+
+@media screen and (max-width: 700px){
+    /*Nosso cabeçalho será organizado em colunas, o menu aparecerá abaixo da logo*/
+    header .container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Para a classe de botão, caso estivar menor que 700px, vamos colocar uma margem 
+entre os botões e mudaremos o tamanho*/
+   .botao{
+    margin-top: 5px;
+    width: 300px;
+
+   }
+
+}
+/*Mesmo que ele atinja os 1000px, a descrição vai manter nos 50% da tela*/
+@media screen and (min-width: 1000px) {
+    .descricao{
+        width: 50%;
+    }
+}
+
